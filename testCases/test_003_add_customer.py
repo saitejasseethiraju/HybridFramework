@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from pageObjects.LoginPageObject import Login
 from pageObjects.add_new_customer_page import AddCustomer
@@ -31,6 +33,7 @@ class Test_003_AddCustomer:
 
         self.addcust = AddCustomer(self.driver)
         self.addcust.clickOnCustomersMenu()
+        time.sleep(4)
         self.addcust.clickOnCustomersMenuItem()
 
         self.addcust.clickOnAddnew()
