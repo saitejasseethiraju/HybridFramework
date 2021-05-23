@@ -1,0 +1,80 @@
+Step1
+install required packages
+
+step2
+Create folder structure
+    1.pageObjects( Pacakage)
+    2.testCases(pacakge)
+    3.Utilities(package)
+    4.TestData(folder)
+    5.Configurations(folder)
+    6.Logs(folder)
+    7.Reports(folder)
+    8.Screenshots(folder)
+
+
+step3
+Automating Login Test case
+1.Create Login Page object class under "pageobjects"
+2.Create Login under "testcases"
+3. create conftest.py under "testcases"
+
+
+step4:
+Capture the Screenshots on failures
+1.update Login test with screen shots under "testcases"
+
+stepp5
+Read common values from ini file
+Add config.ini file in Configurations folder
+create readproperties.py utility file under utilities pacakage
+replce hard coded values in Login test case
+
+
+step6
+Adding logs  to test case
+Add customlogger.py under utilities package
+add logs to login test case
+
+
+Step7
+run tests on desired browser/ cross browser/parllel
+7.1: update conftest.py with required fixtures which will accept command line argument
+7.2: pass browser name as argument in comd line
+
+To Run on desired browser
+pytest -v -s login.py --browser chrome
+pytest -v -s login.py --browser firefox
+
+To run parallel
+pytest -v -s -n=3 login.py --browser chrome
+pytest -v -s -n=3 login.py --browser firefox
+
+
+step8
+Generate HtMl report
+8.1: Update conftest with pytest hooks
+8.2 to gen reports run below command
+
+pytest -v -s -n=3 --html=Reports\report.html login.py --browser chrome
+
+#for getting log in html use capture=tee-sys
+pytest -v --capture=tee-sys -n=2 --html=Reports\report2.html testCases/test_Login.py
+
+
+STep9:
+9.1 Prepare test data in Excel sheet ., place the excel file inside the TestData folder'
+9.2 Create "ExcelUtils.py" utility class under utilities package
+9.3 Create LoginDataDrivenTest under testcases
+
+step10:
+Adding new testcase
+1/ Add new customer
+2. Search by email
+3. 2. Search by name
+
+step11:
+Grouping Tests
+sanity
+regression
+

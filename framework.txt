@@ -1,0 +1,53 @@
+Easy to maintain
+frame work is an organized way of maintaining automation files.
+In the framework all the files will communicate each other to perform certain task.
+
+Objectives/Goals:
+1.Re-usability
+2.Maintainability
+
+types:
+1.Built in frameworks
+    pytest, robot framework, unittest etc
+
+2. Customized/user defined frameworks
+    Data driven framework, keyword driven, Hybrid Driven framework.
+
+
+
+Phases
+------
+1). Analyze the application, technology and skill set of team, choose test cases.
+
+
+100 TC's are there how to choose TC 's for automation
+
+priority:
+1.re-test cases(test data).
+2.Regression cases.
+3.TC's which can be automatable.
+
+
+What is 100% automation??
+Not possible to to automate 100%.
+
+2). Design and implementation of framework.
+
+3). Execution
+
+4). Maintenance (Version Control Sysytem)
+
+
+Which application we are going to automate...
+eCommerce Application....
+Amazon.
+
+Frontend Application(https://frontend.nopcommerce.com/)
+Backend Application(https://admin-demo.nopcommerce.com/login)
+
+REM pytest -v --capture=tee-sys -m "sanity or regression" --html=./Reports/sanity_or_regression.html testCases/
+
+REM pytest -v --capture=tee-sys -m "sanity and regression" --html=./Reports/sanity_and_regression.html testCases/
+
+REM pytest -v --capture=tee-sys -m regression--html=./Reports/regression.html testCases/
+
